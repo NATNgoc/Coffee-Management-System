@@ -38,6 +38,7 @@ namespace TestProject2.BLLTest
         public void AccountBLL_xuLyLogin(string username, string password, bool expected)
         {
             // set up method
+            //ss
             // call action
             bool actual = _accountBLL.xuLyLogin(username, password);
             // compare

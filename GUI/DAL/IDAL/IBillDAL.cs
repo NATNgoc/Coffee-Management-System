@@ -20,6 +20,5 @@ namespace GUI.DAL.IDAL
         int getDiscount(int maBill);
         bool huyBill(int maBill);
         bool xoaBill_Infor(int maBill);
-        DataTable HienThiDoanhThuForReport(DateTime dateStart, DateTime dateEnd);
     }
 }
