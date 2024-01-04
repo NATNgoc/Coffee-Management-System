@@ -158,18 +158,5 @@ namespace TestProject2.BLLTest
             Assert.AreEqual(expectedTotalRevenue, actualTotalRevenue);
         }
 
-        [Test]
-        public void BillBLL_HienThiDoanhThuForReport()
-        {
-            // setup method
-            DateTime dateStart = new DateTime(2022, 1, 1);
-            DateTime dateEnd = new DateTime(2022, 1, 31);
-            DataTable expectedDataTable = new DataTable();
-            _mockBillDAL.Setup(m => m.HienThiDoanhThuForReport(dateStart, dateEnd)).Returns(expectedDataTable);
-            // call action
-            DataTable actualDataTable = _billBLL.HienThiDoanhThuForReport(dateStart, dateEnd);
-            // compare
-            Assert.AreEqual(expectedDataTable, actualDataTable);
-        }
     }
 }

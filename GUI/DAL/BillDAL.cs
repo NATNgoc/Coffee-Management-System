@@ -333,32 +333,6 @@ namespace DAL
             return DataProvider.Instance.excecuteQueryWithParameter(cmd);
 
         }
-        public   DataTable HienThiDoanhThuForReport( DateTime dateStart, DateTime dateEnd)
-        {
-            DataTable dataTable = new DataTable();
-            // Stryker disable once all
-
-            Sql_Connection.Instance.openCon();
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
-            // Stryker disable once all
-            cmd.CommandText = "HienThiDoanhThuForReport";
-            // Stryker disable once all
-            SqlParameter parD1 = new SqlParameter("@dateStart", SqlDbType.Date);
-            // Stryker disable once all
-            SqlParameter parD2 = new SqlParameter("@dateEnd", SqlDbType.Date);
-
-            parD1.Value = dateStart;
-            parD2.Value = dateEnd;
-            // Stryker disable once all
-            cmd.Parameters.Add(parD1);
-            // Stryker disable once all
-            cmd.Parameters.Add(parD2);
-
-            return DataProvider.Instance.excecuteQueryWithParameter_DataTable(cmd);
-
-
-        }
 
     }
 }

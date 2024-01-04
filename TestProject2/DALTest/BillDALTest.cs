@@ -167,26 +167,6 @@ namespace TestProject2.DALTest
             Assert.AreEqual(0, actual.Rows.Count);
         }
         #endregion
-        #region HienThiDoanhThuForReport
-        [Test]
-        public void TestHienThiDoanhThuForReport_ReturnsDataTable_WhenExecuteSalesReportReturnsDataTable()
-        {
-            // setup method
-            // setup method
-
-            DataTable dataTable = new DataTable();
-            _mockDataProvider.Setup(m => m.excecuteQueryWithParameter_DataTable(It.IsAny<SqlCommand>())).Returns(dataTable);
-            string dateString = "2023-11-11";
-            DateTime startDate = DateTime.ParseExact(dateString, "yyyy-MM-dd", CultureInfo.InvariantCulture);
-            DateTime endDate = startDate;
-
-            // call action
-            DataTable actual = BillDAL.Instance.HienThiDoanhThuForReport(startDate, endDate);
-
-            // compare
-            Assert.AreEqual(0, actual.Rows.Count);
-        }
-        #endregion
         #region CapNhatDiscount
         [Test]
         [TestCase(2, 50, true)]
