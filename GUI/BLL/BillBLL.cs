@@ -62,9 +62,5 @@ namespace BLL
         {
             return _billDAL.hienThiTongDanhThu(dateStart, dateEnd);
         }
-        public   DataTable HienThiDoanhThuForReport(DateTime dateStart, DateTime dateEnd)
-        {
-            return _billDAL.HienThiDoanhThuForReport(dateStart, dateEnd);
-        }
     }
 }
