@@ -50,10 +50,7 @@ namespace BLL
         {
             return _billDAL.getDiscount(maBill);
         }
-        public bool huyBill(int maBill)
-        {
-            return _billDAL.huyBill(maBill);
-        }
+     
         public  int getSizeOfBill(DateTime dateStart, DateTime dateEnd)
         {
             return _billDAL.getSizeOfBill(dateStart, dateEnd);

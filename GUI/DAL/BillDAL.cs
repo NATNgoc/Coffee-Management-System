@@ -292,37 +292,7 @@ namespace DAL
 
 
         }
-        public  bool huyBill(int maBill)
-        {
-            // xóa bill infor
-            SqlCommand cmd1 = new SqlCommand();
-            cmd1.CommandType = CommandType.Text;
-            // Stryker disable once all
-            cmd1.CommandText = "delete from Bill_infor where idBill = " + maBill;
-            bool kq= DataProvider.Instance.excecuteQueryWithParameter(cmd1);
-            // end xoa billinfor
-
-            if (!kq)
-                return false;
-            // Stryker disable once all
-            Sql_Connection.Instance.openCon();
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
-            // Stryker disable once all
-            cmd.CommandText = "huyBill";
-            // Stryker disable once all
-            SqlParameter pa = new SqlParameter("@idBill", SqlDbType.Int);
-            pa.Value = maBill;
-            // Stryker disable once all
-            cmd.Parameters.Add(pa);
-
-            return DataProvider.Instance.excecuteQueryWithParameter(cmd);
-
-
-
-
-        }
-
+    
         public  bool xoaBill_Infor(int maBill)
         {
 

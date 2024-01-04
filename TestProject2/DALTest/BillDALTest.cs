@@ -82,22 +82,6 @@ namespace TestProject2.DALTest
             Assert.AreEqual(expected, actual);
         }
         #endregion
-        #region HuyBill
-        [Test]
-        [TestCase(1,  true)]
-        [TestCase( 3, false)]
-        public void TestHuyBill(int maBill, bool expected)
-        {
-            // setup method
-            _mockDataProvider.Setup(m => m.excecuteQueryWithParameter(It.IsAny<SqlCommand>())).Returns(expected);
-
-            // call action
-            bool actual = BillDAL.Instance.huyBill(maBill);
-
-            // compare 
-            Assert.AreEqual(expected,actual);
-        }
-        #endregion
         #region GetUncheckBillByTable
         [Test]
         [TestCase(68, 245)]

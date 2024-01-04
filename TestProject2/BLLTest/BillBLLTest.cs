@@ -119,18 +119,6 @@ namespace TestProject2.BLLTest
         }
 
         [Test]
-        public void BillBLL_huyBill()
-        {
-            // setup method
-            int maBill = 1;
-            _mockBillDAL.Setup(m => m.huyBill(maBill)).Returns(true);
-            // call action
-            bool actual = _billBLL.huyBill(maBill);
-            // compare
-            Assert.IsTrue(actual);
-        }
-
-        [Test]
         public void BillBLL_getSizeOfBill()
         {
             // setup method

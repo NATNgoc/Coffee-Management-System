@@ -18,7 +18,6 @@ namespace GUI.DAL.IDAL
         bool capNhatDiscount(int maBill, decimal discount);
         int getSizeOfBill(DateTime dateStart, DateTime dateEnd);
         int getDiscount(int maBill);
-        bool huyBill(int maBill);
         bool xoaBill_Infor(int maBill);
     }
 }
